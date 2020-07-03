@@ -1,0 +1,43 @@
+.conteyner {
+  background-image: url("https://img5.goodfon.ru/original/1920x1080/f/b7/gaming-night-stil-fon-style-illustration-retrowave-synthwave.jpg");
+  background-size: contain;
+  width: 1100px;
+  height: 600px;
+  counter-reset: count;
+  position: relative;
+  background-repeat: no-repeat;
+}
+img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  counter-increment: count;
+}
+
+h1::after {
+  content: " " counter(count);
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+  left: -999999px;
+  opacity: 0.9; 
+}
+
+h1 {
+  position: absolute;
+  bottom: -16px;
+  left: 32px;
+}
+/*input[type="button"]:checked {
+  visibility: hidden;
+}*/
+
+.text {
+  color: white;
+}
